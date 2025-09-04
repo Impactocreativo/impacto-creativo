@@ -569,6 +569,16 @@ section {
         text-align: center;
     }
 
+    /* Ajuste para el grid de productos */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .featured-products h3 {
+        margin-top: 40px; /* Espacio para los nuevos títulos */
+    }
+
     /* Ajuste para las imágenes, asegurando que no excedan el ancho del contenedor */
     .about-image img,
     .product-item img,
@@ -589,4 +599,3 @@ section {
         text-align: center;
     }
 }
-
