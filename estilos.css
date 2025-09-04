@@ -17,7 +17,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* ¡Clase para arreglar el scroll! */
+/* Clase para arreglar el scroll cuando el modal está abierto */
 body.no-scroll {
     overflow: hidden;
 }
@@ -521,20 +521,62 @@ section {
     to {top: 5%; opacity: 1}
 }
 
-/* Media Queries para Responsividad */
+/* --- Media Query para Dispositivos Móviles (ancho máximo de 768px) --- */
 @media (max-width: 768px) {
+    /* Ajustes generales del cuerpo y secciones */
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    /* Ajuste para el encabezado */
     .main-header {
         flex-direction: column;
-        padding: 10px 20px;
+        padding: 10px 15px;
         position: static;
         box-shadow: none;
     }
-
+    
     .main-nav {
         margin-top: 10px;
+    }
+
+    /* Ajuste para el Hero Section */
+    .hero-section {
+        min-height: 60vh;
     }
 
     .hero-section h1 {
         font-size: 2.5rem;
     }
+
+    /* Ajuste para la sección "Acerca de" */
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajuste para las imágenes, asegurando que no excedan el ancho del contenedor */
+    .about-image img,
+    .product-item img,
+    .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste para el pie de página */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
 }
+
