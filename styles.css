@@ -19,8 +19,10 @@ body {
     z-index: 100;
 }
 
+/* Tamaño del logo por defecto (para PC) */
 .main-header .logo img {
-    height: 50px;
+    height: 70px;
+    transition: height 0.3s ease;
 }
 
 .main-nav ul {
@@ -184,6 +186,8 @@ body {
     transition: background-color 0.3s ease;
     align-self: stretch;
     text-align: center;
+    border: none;
+    cursor: pointer;
 }
 
 .add-to-cart-btn:hover {
@@ -195,6 +199,12 @@ body {
     align-items: center;
     gap: 40px;
     text-align: left;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-us .about-content {
@@ -203,6 +213,7 @@ body {
 
 .about-us .about-image {
     flex: 1;
+    text-align: center;
 }
 
 .about-us .about-image img {
@@ -495,11 +506,16 @@ body {
     font-size: 0.8em;
 }
 
-/* Responsivo para móviles */
+/* Responsive para móviles */
 @media (max-width: 768px) {
     .main-header {
         flex-direction: column;
         text-align: center;
+    }
+    
+    /* Regla específica para el logo en móviles */
+    .main-header .logo img {
+        height: 50px;
     }
 
     .main-nav ul {
@@ -523,11 +539,3 @@ body {
         text-align: center;
     }
 }
-
-
-
-
-
-
-
-
