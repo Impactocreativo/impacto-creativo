@@ -1,3 +1,13 @@
+/* --- Arreglo para el scroll horizontal en móviles --- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+/* --- Fin del arreglo --- */
+
 /* Variables */
 :root {
     --primary-color: #f7a400; /* Naranja/Amarillo */
@@ -579,4 +589,3 @@ section {
         text-align: center;
     }
 }
-
