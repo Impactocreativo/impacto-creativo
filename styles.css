@@ -1,60 +1,48 @@
-/* Importar fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* --- Colores de la paleta --- */
-:root {
-    --primary-color: #FFD700;   /* Dorado */
-    --secondary-color: #000000; /* Negro */
-    --accent-color: #FFC300;     /* Dorado un poco más claro */
-    --text-color: #f0f0f0;       /* Gris claro para el texto */
-    --light-bg: #1a1a1a;        /* Gris oscuro para el fondo */
-    --dark-bg: #000000;         /* Negro para el fondo más oscuro */
-}
-
-/* Estilos Generales */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--light-bg);
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* --- Encabezado --- */
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: var(--dark-bg);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    color: var(--text-color);
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.logo img {
-    height: 40px; 
-    width: auto; 
-    vertical-align: middle;
+.main-header .logo img {
+    height: 50px;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
     margin: 0;
     padding: 0;
 }
 
-.main-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    transition: color 0.3s;
+.main-nav ul li {
+    margin-left: 20px;
 }
 
-.main-nav a:hover {
-    color: var(--primary-color);
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #ffc107;
 }
 
 .cart-icon-container {
@@ -62,411 +50,416 @@ body {
     cursor: pointer;
 }
 
-.cart-icon {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
 #cart-counter {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: var(--primary-color);
-    color: var(--dark-bg);
+    background-color: #ffc107;
+    color: #fff;
     border-radius: 50%;
     padding: 2px 6px;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 12px;
 }
 
-/* --- Sección Principal (Hero) --- */
 .hero-section {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 20px;
+    padding: 80px 20px;
+    background-color: #e2eafc;
+    color: #333;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
-    margin: 10px 0 20px;
-    max-width: 600px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: var(--primary-color);
-    color: var(--dark-bg);
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
+    background-color: #ffc107;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--accent-color);
+    background-color: #e0a800;
 }
 
-/* --- Sección de Productos --- */
-.featured-products {
-    padding: 80px 20px;
-    background-color: var(--light-bg);
+.featured-products,
+.about-us,
+.confidence-section,
+.portfolio-section,
+.faq-section,
+.contact-section,
+.about-us-family {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
     text-align: center;
 }
 
-.featured-products h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: var(--text-color);
+.featured-products h2,
+.about-us h2,
+.confidence-section h2,
+.portfolio-section h2,
+.faq-section h2,
+.contact-section h2,
+.about-us-family h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.featured-products h2::after,
+.about-us h2::after,
+.confidence-section h2::after,
+.portfolio-section h2::after,
+.faq-section h2::after,
+.contact-section h2::after,
+.about-us-family h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ffc107;
+    margin: 10px auto 0;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: left;
 }
 
 .product-item {
-    background-color: #222;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .product-item img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .product-item h3 {
-    font-size: 1.4rem;
-    margin: 20px 0 5px;
-    color: var(--text-color);
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
 
-.product-item .product-price {
-    font-size: 1.2rem;
+.product-price {
     font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    color: #e0a800;
+    font-size: 1.1em;
+    margin-bottom: 15px;
 }
 
 .add-to-cart-btn {
-    background-color: var(--accent-color);
-    color: var(--dark-bg);
+    background-color: #ffc107;
+    color: #fff;
     padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-    text-decoration: none; /* Asegura que el enlace no tenga subrayado */
-    display: inline-block; /* Permite que el botón tome el padding y el tamaño */
+    transition: background-color 0.3s ease;
+    align-self: stretch;
+    text-align: center;
 }
 
 .add-to-cart-btn:hover {
-    background-color: var(--primary-color);
+    background-color: #e0a800;
 }
 
-
-/* --- Sección de Nosotros --- */
 .about-us {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 40px;
-    background-color: var(--dark-bg);
-    color: var(--text-color);
+    text-align: left;
 }
 
-.about-content {
+.about-us .about-content {
     flex: 1;
 }
 
-.about-content h2 {
-    font-size: 2.5rem;
-    margin-top: 0;
-    color: var(--accent-color);
-}
-
-.about-content p {
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-.about-image {
+.about-us .about-image {
     flex: 1;
 }
 
-.about-image img {
-    width: 100%;
+.about-us .about-image img {
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Sección de Confianza (Nueva) --- */
-.confidence-section {
-    padding: 80px 20px;
+.about-us-family {
     text-align: center;
-    background-color: var(--light-bg);
-    color: var(--text-color);
+    padding: 50px 20px;
+    background-color: #fff;
 }
 
-.confidence-section h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 40px;
+.about-us-family h2 {
+    margin-bottom: 20px;
+}
+
+.about-us-family p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
 }
 
 .confidence-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.confidence-item {
-    background-color: #222;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.confidence-item:hover {
-    transform: translateY(-10px);
-}
-
-.confidence-item i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.confidence-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.confidence-item p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* --- Sección de Portafolio/Galería --- */
-.portfolio-section {
-    padding: 80px 20px;
-    background-color: var(--dark-bg);
-    color: var(--text-color);
     text-align: center;
 }
 
-.portfolio-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
+.confidence-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-section p {
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto 50px;
+.confidence-item i {
+    font-size: 3em;
+    color: #ffc107;
+    margin-bottom: 15px;
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .portfolio-item {
-    background-color: #222;
-    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item img {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.3s ease;
 }
 
-/* --- Sección de Preguntas Frecuentes (FAQ) --- */
-.faq-section {
-    padding: 80px 20px;
-    background-color: var(--light-bg);
-    color: var(--text-color);
-    text-align: center;
-}
-
-.faq-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: var(--primary-color);
+.portfolio-item img:hover {
+    transform: scale(1.1);
 }
 
 .faq-item {
-    background-color: #222;
-    padding: 25px;
-    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
     border-radius: 8px;
-    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
 
 .faq-item h3 {
-    font-size: 1.2rem;
-    color: var(--text-color);
     margin-top: 0;
-    margin-bottom: 10px;
+    cursor: pointer;
+    color: #e0a800;
 }
 
 .faq-item p {
-    font-size: 1rem;
-    color: #ccc;
-    margin: 0;
+    margin-bottom: 0;
     line-height: 1.6;
 }
 
-/* --- Sección de Contacto --- */
 .contact-section {
-    padding: 80px 20px;
-    background-color: var(--dark-bg);
-    color: var(--text-color);
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--primary-color);
-}
-
-.contact-section p {
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto 40px;
+    background-color: #e2eafc;
+    padding: 50px 20px;
 }
 
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
-    background-color: var(--light-bg);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    margin: auto;
+    text-align: left;
 }
 
 .form-group {
-    margin-bottom: 20px;
-    text-align: left;
+    margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
+    margin-bottom: 5px;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--accent-color);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px;
-    border: none;
+    padding: 10px;
     border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    font-size: 1rem;
+    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px var(--primary-color);
-}
-
 .form-button {
+    display: block;
     width: 100%;
-    padding: 15px;
-    background-color: var(--primary-color);
-    color: var(--dark-bg);
+    padding: 12px;
+    background-color: #ffc107;
+    color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .form-button:hover {
-    background-color: var(--accent-color);
+    background-color: #e0a800;
 }
 
-/* --- Pie de Página --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.cart-items {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.cart-total-container {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.checkout-button {
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #128c7e;
+}
+
+.floating-whatsapp-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+    background-color: #25d366;
+    color: white;
+    font-size: 28px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.floating-whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
 .main-footer {
-    background-color: var(--dark-bg);
+    background-color: #222;
     color: #fff;
-    padding: 60px 20px 20px;
-    font-size: 0.9rem;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto 30px;
+    max-width: 1100px;
+    margin: auto;
+    gap: 20px;
     text-align: left;
 }
 
 .footer-section {
-    flex-basis: 250px;
+    flex-basis: 30%;
+    margin-bottom: 20px;
 }
 
 .footer-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #555;
-    padding-bottom: 5px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffc107;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-top: 0;
 }
 
 .footer-section ul {
@@ -474,74 +467,59 @@ body {
     padding: 0;
 }
 
-.footer-section a {
+.footer-section ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #ccc;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-.footer-section a:hover {
-    color: var(--primary-color);
+.footer-section ul li a:hover {
+    color: #ffc107;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
 }
 
 .footer-bottom {
-    text-align: center;
-    border-top: 1px solid #444;
+    margin-top: 20px;
     padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.8em;
 }
 
-/* --- Estilos para pantallas más pequeñas (Responsive) --- */
+/* Responsivo para móviles */
 @media (max-width: 768px) {
-    /* Estilos para el encabezado en móviles */
     .main-header {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
+        text-align: center;
     }
-    
-    .main-nav {
-        margin-top: 10px;
-        width: 100%;
-    }
-    
+
     .main-nav ul {
         flex-direction: column;
-        gap: 10px;
     }
-    
-    /* Adaptación de las secciones principales */
+
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 2.5em;
     }
-    
-    .hero-section p {
-        font-size: 1rem;
-    }
-    
+
     .about-us {
         flex-direction: column;
-        gap: 20px;
-        text-align: center;
     }
-    
-    .about-image {
-        width: 100%;
-    }
-    
-    /* Cuadrículas que pasan a una sola columna */
-    .product-grid,
-    .confidence-grid,
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    /* Footer que se organiza verticalmente */
+
     .footer-content {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        gap: 20px;
     }
 }
-
