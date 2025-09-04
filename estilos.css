@@ -152,6 +152,14 @@ section {
     margin-top: 40px;
 }
 
+/* Estilo para los títulos de categoría dentro del grid */
+.product-grid h3 {
+    grid-column: 1 / -1; /* Esto hace que el título ocupe todo el ancho */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
 .product-item {
     background-color: #f9f9f9;
     padding: 20px;
@@ -576,7 +584,8 @@ section {
     }
     
     .featured-products h3 {
-        margin-top: 40px; /* Espacio para los nuevos títulos */
+        margin-top: 40px;
+        grid-column: 1 / -1; /* Asegura que el título ocupe todo el ancho del grid en móvil */
     }
 
     /* Ajuste para las imágenes, asegurando que no excedan el ancho del contenedor */
