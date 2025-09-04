@@ -77,4 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         cartCounterSpan.textContent = totalItems;
     }
+
 });
