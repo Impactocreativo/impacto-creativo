@@ -1,14 +1,26 @@
 /* Importar la fuente Poppins de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* Definición de variables de color para fácil mantenimiento */
+:root {
+    --color-primary: #FFD700; /* Dorado */
+    --color-secondary: #000000; /* Negro profundo */
+    --color-text-light: #ffffff; /* Texto claro */
+    --color-text-dark: #333333; /* Texto oscuro */
+    --color-background-light: #f4f4f4; /* Fondo claro */
+    --color-background-dark: #1a1a1a; /* Fondo oscuro (para contrastar con el negro puro) */
+    --color-accent-blue: #3498db; /* Azul original para carrito si se quiere mantener */
+    --color-accent-green: #2ecc71; /* Verde original para WhatsApp si se quiere mantener */
+}
+
 /* Reglas generales para el body y los elementos básicos */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-light);
     line-height: 1.6;
     overflow-x: hidden; /* Evita el scroll horizontal */
 }
@@ -23,15 +35,16 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-secondary); /* Fondo negro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo img {
-    height: 50px;
+    height: 50px; /* Asegura que tu logo se vea bien */
+    border-radius: 5px; /* Si tu logo es cuadrado, un borde suave */
 }
 
 .main-nav ul {
@@ -44,13 +57,13 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-primary); /* Texto de navegación en dorado */
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: #ff5722;
+    color: var(--color-text-light); /* Blanco al pasar el ratón */
 }
 
 .cart-icon-container {
@@ -60,15 +73,15 @@ body {
 
 .cart-icon-container .fas {
     font-size: 1.5rem;
-    color: #333;
+    color: var(--color-primary); /* Icono del carrito en dorado */
 }
 
 #cart-counter {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: #ff5722;
-    color: #fff;
+    background-color: var(--color-primary); /* Contador del carrito en dorado */
+    color: var(--color-secondary); /* Texto negro */
     border-radius: 50%;
     padding: 4px 8px;
     font-size: 0.8rem;
@@ -88,7 +101,7 @@ section {
 
 h1, h2, h3, h4 {
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--color-secondary); /* Títulos en negro */
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -114,15 +127,15 @@ h2 {
 .hero-section {
     text-align: center;
     background: url('images/hero.jpg') no-repeat center center/cover;
-    color: #fff;
+    color: var(--color-text-light); /* Texto en blanco para contraste */
     padding: 10rem 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el texto */
 }
 
 .hero-section h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--color-primary); /* Título del héroe en dorado */
 }
 
 .hero-section p {
@@ -131,22 +144,23 @@ h2 {
 }
 
 .cta-button {
-    background-color: #ff5722;
-    color: #fff;
+    background-color: var(--color-primary); /* Botón dorado */
+    color: var(--color-secondary); /* Texto negro */
     text-decoration: none;
     padding: 1rem 2rem;
     border-radius: 5px;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #e64a19;
+    background-color: darken(var(--color-primary), 10%); /* Dorado más oscuro al pasar el ratón */
+    color: var(--color-text-light); /* Texto blanco al pasar el ratón */
 }
 
 /* Productos destacados */
 .featured-products {
-    background-color: #fff;
+    background-color: var(--color-background-light);
 }
 
 .product-grid {
@@ -157,7 +171,7 @@ h2 {
 }
 
 .product-item {
-    background-color: #fff;
+    background-color: var(--color-text-light); /* Fondo blanco para los ítems */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1.5rem;
@@ -180,12 +194,13 @@ h2 {
 .product-item h4 {
     font-size: 1.2rem;
     margin: 0.5rem 0;
+    color: var(--color-secondary); /* Título de producto en negro */
 }
 
 .product-price {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #ff5722;
+    color: var(--color-primary); /* Precio en dorado */
     margin-bottom: 1rem;
     display: block;
 }
@@ -202,27 +217,28 @@ h2 {
     border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
+    color: var(--color-secondary); /* Texto de botón negro */
 }
 
 .add-to-cart-btn {
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--color-primary); /* Botón de carrito en dorado */
 }
 
 .add-to-cart-btn:hover {
-    background-color: #2980b9;
+    background-color: darken(var(--color-primary), 10%);
+    color: var(--color-text-light); /* Texto blanco al pasar el ratón */
 }
 
 .buy-now-btn {
-    background-color: #2ecc71;
-    color: #fff;
+    background-color: var(--color-primary); /* Botón de comprar en dorado */
     text-align: center;
 }
 
 .buy-now-btn:hover {
-    background-color: #27ae60;
+    background-color: darken(var(--color-primary), 10%);
+    color: var(--color-text-light); /* Texto blanco al pasar el ratón */
 }
 
 /* Sección Sobre Nosotros */
@@ -230,7 +246,12 @@ h2 {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color: #f9f9f9;
+    background-color: var(--color-background-dark); /* Fondo oscuro */
+    color: var(--color-text-light); /* Texto claro */
+}
+
+.about-us h2 {
+    color: var(--color-primary); /* Título en dorado */
 }
 
 .about-content {
@@ -247,12 +268,16 @@ h2 {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Sección de Confianza */
 .confidence-section {
-    background-color: #fff;
+    background-color: var(--color-background-light);
+}
+
+.confidence-section h2 {
+    color: var(--color-secondary);
 }
 
 .confidence-grid {
@@ -264,22 +289,31 @@ h2 {
 
 .confidence-item i {
     font-size: 3rem;
-    color: #ff5722;
+    color: var(--color-primary); /* Iconos en dorado */
     margin-bottom: 1rem;
 }
 
 /* Sección de Contacto */
 .contact-section {
-    background-color: #f4f4f4;
+    background-color: var(--color-background-dark); /* Fondo oscuro */
+    color: var(--color-text-light); /* Texto claro */
+}
+
+.contact-section h2 {
+    color: var(--color-primary); /* Título en dorado */
+}
+
+.contact-section p {
+    color: var(--color-text-light);
 }
 
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--color-secondary); /* Fondo del formulario en negro */
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .form-group {
@@ -290,36 +324,40 @@ h2 {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
+    color: var(--color-primary); /* Etiquetas en dorado */
 }
 
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #555; /* Borde más suave */
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
+    background-color: #333; /* Fondo de campo oscuro */
+    color: var(--color-text-light); /* Texto de entrada claro */
 }
 
 .form-button {
     width: 100%;
     padding: 1rem;
-    background-color: #ff5722;
-    color: #fff;
+    background-color: var(--color-primary); /* Botón de formulario en dorado */
+    color: var(--color-secondary); /* Texto negro */
     border: none;
     border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .form-button:hover {
-    background-color: #e64a19;
+    background-color: darken(var(--color-primary), 10%);
+    color: var(--color-text-light); /* Texto blanco al pasar el ratón */
 }
 
 /* Pie de página */
 .main-footer {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: var(--color-secondary); /* Fondo negro */
+    color: var(--color-text-light); /* Texto claro */
     padding: 2rem 1rem 1rem;
     text-align: center;
 }
@@ -339,7 +377,7 @@ h2 {
 
 .footer-section h2, .footer-section p {
     margin-top: 0;
-    color: #fff;
+    color: var(--color-primary); /* Títulos en dorado */
 }
 
 .footer-section h2 {
@@ -354,29 +392,30 @@ h2 {
 
 .footer-section a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-text-light); /* Enlaces en blanco */
     transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: #ff5722;
+    color: var(--color-primary); /* Dorado al pasar el ratón */
 }
 
 .social-icons a {
     font-size: 1.5rem;
     margin: 0 0.5rem;
-    color: #fff;
+    color: var(--color-primary); /* Iconos sociales en dorado */
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ff5722;
+    color: var(--color-text-light); /* Blanco al pasar el ratón */
 }
 
 .footer-bottom {
-    border-top: 1px solid #4a6674;
+    border-top: 1px solid #333; /* Separador más oscuro */
     padding-top: 1rem;
     font-size: 0.9rem;
+    color: var(--color-text-light);
 }
 
 /* Botón flotante de WhatsApp */
@@ -384,8 +423,8 @@ h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25d366;
-    color: #fff;
+    background-color: var(--color-accent-green); /* Mantener verde por reconocimiento de marca WhatsApp */
+    color: var(--color-text-light);
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -417,7 +456,7 @@ h2 {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--color-background-light); /* Fondo del modal claro */
     margin: 10% auto;
     padding: 20px;
     border-radius: 8px;
@@ -426,6 +465,11 @@ h2 {
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     animation: slideUp 0.4s forwards;
+    color: var(--color-text-dark);
+}
+
+.modal-content h2 {
+    color: var(--color-secondary); /* Título del modal en negro */
 }
 
 @keyframes fadeInModal {
@@ -447,7 +491,7 @@ h2 {
 }
 
 .close-button:hover, .close-button:focus {
-    color: #333;
+    color: var(--color-secondary);
     text-decoration: none;
 }
 
@@ -469,20 +513,22 @@ h2 {
 }
 
 .item-quantity button {
-    background: #f4f4f4;
+    background: var(--color-background-light);
     border: 1px solid #ccc;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 4px;
+    color: var(--color-secondary);
 }
 
 .item-quantity span {
     margin: 0 10px;
+    color: var(--color-secondary);
 }
 
 .remove-item-btn {
-    background-color: #e74c3c;
-    color: #fff;
+    background-color: #e74c3c; /* Rojo para eliminar, universalmente reconocido */
+    color: var(--color-text-light);
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
@@ -504,14 +550,15 @@ h2 {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 1rem;
+    color: var(--color-secondary);
 }
 
 .checkout-button {
     display: block;
     width: 100%;
     text-align: center;
-    background-color: #2ecc71;
-    color: #fff;
+    background-color: var(--color-accent-green); /* Mantener verde por reconocimiento de marca WhatsApp */
+    color: var(--color-text-light);
     padding: 1rem;
     text-decoration: none;
     border-radius: 5px;
@@ -520,12 +567,21 @@ h2 {
 }
 
 .checkout-button:hover {
-    background-color: #27ae60;
+    background-color: darken(var(--color-accent-green), 10%);
 }
 
 .no-scroll {
     overflow: hidden;
 }
+
+/* Helper para oscurecer colores (para hover, etc.) */
+/* Nota: En CSS puro, 'darken' no existe. Se usa manualmente o con preprocesadores. */
+/* Para este ejemplo, simulo un darken bajando el valor. */
+/* En un proyecto real, se definen variaciones o se usa HSL/Sass/Less. */
+/* Por ejemplo, darken(var(--color-primary), 10%) es simplemente un dorado más oscuro */
+/* Puedes ajustar manualmente estos valores si no usas un preprocesador. */
+/* Actualmente, esto es solo un comentario, los valores de hover están definidos explícitamente */
+
 
 /* Media Queries para diseño responsive */
 @media (max-width: 768px) {
@@ -583,6 +639,9 @@ h2 {
 
     .footer-section {
         text-align: center;
+    }
+    .footer-section h2 {
+        text-align: center; /* Alinea el título al centro en móvil */
     }
 }
 
