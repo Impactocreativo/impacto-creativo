@@ -1,589 +1,378 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impacto Creativo</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Creativo</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
-    <header class="main-header">
-        <a href="#inicio" class="logo">
-            <img src="images/logo-impacto-creativo.jpg" alt="Logo de Impacto Creativo">
-        </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="cart-icon-container" onclick="openModal()">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-counter">0</span>
-        </div>
-    </header>
+    
+    <header class="main-header">
+        <a href="#inicio" class="logo">
+            <img src="images/logo-impacto-creativo.jpg" alt="Logo de Impacto Creativo">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon-container" onclick="openModal()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-counter">0</span>
+        </div>
+    </header>
 
-    <div id="cart-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2>Tu Carrito</h2>
-            <div id="cart-items-container" class="cart-items">
-                <p id="empty-cart-message">Tu carrito está vacío.</p>
-            </div>
-            <div class="cart-total-container">
-                Total: <span id="cart-total">$0.00</span>
-            </div>
-            <a id="checkout-btn" class="checkout-button" href="#" target="_blank">Comprar por WhatsApp</a>
-        </div>
-    </div>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items-container" class="cart-items">
+                <p id="empty-cart-message">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-total-container">
+                Total: <span id="cart-total">$0.00</span>
+            </div>
+            <a id="checkout-btn" class="checkout-button" href="#" target="_blank">Comprar por WhatsApp</a>
+        </div>
+    </div>
 
-    <main>
-        <section id="inicio" class="hero-section">
-            <h1 class="animate-on-scroll">Impacto Creativo</h1>
-            <p class="animate-on-scroll">Personalizamos tus ideas. Regalos y productos únicos.</p>
-            <a href="#catalogo" class="cta-button animate-on-scroll">Ver Catálogo</a>
-        </section>
+    <main>
+        <section id="inicio" class="hero-section">
+            <h1 class="animate-on-scroll">Tu Diseño, Nuestra Magia.</h1>
+            <p class="animate-on-scroll">Hacemos realidad tus ideas en tazas, camisetas, gorras y mucho más. Calidad y color en cada detalle.</p>
+            <a href="#catalogo" class="cta-button animate-on-scroll">Ver Catálogo</a>
+        </section>
 
-        <section id="catalogo" class="featured-products">
-            <h2>Productos para Personalizar</h2>
-            <div class="product-grid">
-                <h3>Remeras</h3>
-                <div class="product-item" data-name="Remeras Personalizadas" data-price="350.00">
-                    <img src="images/remeras-personalizadas.jpg" alt="Remeras personalizadas">
-                    <h4>Remeras Personalizadas</h4>
-                    <span class="product-price">$350.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Remera%20Personalizada.%20Precio:%20$350.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-    
-                <h3>Perfumes</h3>
-                <div class="product-item" data-name="Perfumes de 30ml" data-price="350.00">
-                    <img src="images/perfumes-de-30ml-onlyou.png" alt="Perfumes Onlyou de 30ml">
-                    <h4>Perfumes de 30ml</h4>
-                    <span class="product-price">$350.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20Perfumes%20de%2030ml.%20Precio:%20$350.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-    
-                <h3>Cuadros</h3>
-                <div class="product-item" data-name="Cuadro Personalizado" data-price="450.00">
-                    <img src="images/cuadro-personalizado.jpg" alt="Cuadro personalizado">
-                    <h4>Cuadro Personalizado</h4>
-                    <span class="product-price">$450.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Cuadro%20Personalizado.%20Precio:%20$450.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-    
-                <h3>Varios Productos</h3>
-                <div class="product-item" data-name="Botella Personalizada" data-price="300.00">
-                    <img src="images/botella-personalizada.jpg" alt="Botella de agua personalizada">
-                    <h4>Botella Personalizada</h4>
-                    <span class="product-price">$300.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Botella%20Personalizada.%20Precio:%20$300.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Cadena Personalizada" data-price="390.00">
-                    <img src="images/cadena-personalizada.jpg" alt="Cadena personalizada">
-                    <h4>Cadena Personalizada</h4>
-                    <span class="product-price">$390.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Cadena%20Personalizada.%20Precio:%20$390.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Cajas Sorpresa" data-price="25.00">
-                    <img src="images/cajas-sorpresita-personalizada.jpg" alt="Cajas sorpresita personalizadas">
-                    <h4>Cajas Sorpresa</h4>
-                    <span class="product-price">$25.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Caja%20Sorpresa.%20Precio:%20$25.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Calcomanía Única" data-price="80.00">
-                    <img src="images/calcamonia-personalizada.jpg" alt="Calcomanía Única">
-                    <h4>Calcomanía Única</h4>
-                    <span class="product-price">$80.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Calcomanía%20Única.%20Precio:%20$80.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-    
-                <h3>Más Productos</h3>
-                <div class="product-item" data-name="Bandera 90x60 Personalizada" data-price="0.00">
-                    <img src="images/bandera90x60personalizada.jpg" alt="Bandera 90x60 Personalizada">
-                    <h4>Bandera 90x60 Personalizada</h4>
-                    <span class="product-price">$300.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Bandera%2090x60%20Personalizada.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Banderin Intercambio Personalizado" data-price="0.00">
-                    <img src="images/banderinintercambiopersonalizado.jpg" alt="Banderin Intercambio Personalizado">
-                    <h4>Banderin Intercambio Personalizado</h4>
-                    <span class="product-price">$125.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Banderin%20Intercambio%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Bolsa de TNT Personalizada" data-price="0.00">
-                    <img src="images/bolsadetntpersonalizada.jpg" alt="Bolsa de TNT Personalizada">
-                    <h4>Bolsa de TNT Personalizada</h4>
-                    <span class="product-price">$30.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Bolsa%20de%20TNT%20Personalizada.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Botella Medio Litro Personalizada" data-price="0.00">
-                    <img src="images/botellamediolitropersonalizada.jpg" alt="Botella Medio Litro Personalizada">
-                    <h4>Botella Medio Litro Personalizada</h4>
-                    <span class="product-price">$250.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Botella%20Medio%20Litro%20Personalizada.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Caja Sorpresita Varios Modelos Personalizada" data-price="0.00">
-                    <img src="images/cajasorpresitapavariosmodelopersonalizada.jpg" alt="Caja Sorpresita Varios Modelos Personalizada">
-                    <h4>Caja Sorpresita Varios Modelos Personalizada</h4>
-                    <span class="product-price">$70.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Caja%20Sorpresita%20Varios%20Modelos%20Personalizada.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Colgante Huesito" data-price="0.00">
-                    <img src="images/colgantehuesito.jpg" alt="Colgante Huesito">
-                    <h4>Colgante Huesito</h4>
-                    <span class="product-price">$150.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Colgante%20Huesito.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Cuadro Feliz Dia Personalizado" data-price="0.00">
-                    <img src="images/cuadrofelizdiapersonalizado.jpg" alt="Cuadro Feliz Dia Personalizado">
-                    <h4>Cuadro Feliz Dia Personalizado</h4>
-                    <span class="product-price">$400.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Cuadro%20Feliz%20Dia%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Cuadro MDF Personalizado" data-price="0.00">
-                    <img src="images/cuadromdfpersonalizado.jpg" alt="Cuadro MDF Personalizado">
-                    <h4>Cuadro MDF Personalizado</h4>
-                    <span class="product-price">$400.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Cuadro%20MDF%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Destapador con Iman Personalizado" data-price="0.00">
-                    <img src="images/destapadorconimanpersonalizado.jpg" alt="Destapador con Iman Personalizado">
-                    <h4>Destapador con Iman Personalizado</h4>
-                    <span class="product-price">$150.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Destapador%20con%20Iman%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Gorras Trucker Personalizada" data-price="0.00">
-                    <img src="images/gorrastruckerpersonalizada.jpg" alt="Gorras Trucker Personalizada">
-                    <h4>Gorras Trucker Personalizada</h4>
-                    <span class="product-price">$150.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20Gorras%20Trucker%20Personalizada.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Huella Gato Personalizado" data-price="0.00">
-                    <img src="images/huellagatopersonalizado.jpg" alt="Huella Gato Personalizado">
-                    <h4>Huella Gato Personalizado</h4>
-                    <span class="product-price">$150.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Huella%20Gato%20Personalizada.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Jarro Peltre Personalizado" data-price="0.00">
-                    <img src="images/jarropeltrepersonalizado.jpg" alt="Jarro Peltre Personalizado">
-                    <h4>Jarro Peltre Personalizado</h4>
-                    <span class="product-price">$350.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Jarro%20Peltre%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Llavero 7 Dije Personalizado" data-price="0.00">
-                    <img src="images/llavero7dijepersonalizado.jpg" alt="Llavero 7 Dije Personalizado">
-                    <h4>Llavero 7 Dije Personalizado</h4>
-                    <span class="product-price">$300.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Llavero%207%20Dije%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Llavero Acrilico Personalizado" data-price="0.00">
-                    <img src="images/llaveroacrilicopersonalizado.jpg" alt="Llavero Acrilico Personalizado">
-                    <h4>Llavero Acrilico Personalizado</h4>
-                    <span class="product-price">$15.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Llavero%20Acrilico%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Llavero Cuero Personalizado" data-price="0.00">
-                    <img src="images/llaverocueropersonalizado.jpg" alt="Llavero Cuero Personalizado">
-                    <h4>Llavero Cuero Personalizado</h4>
-                    <span class="product-price">$150.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Llavero%20Cuero%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Marcador de Pagina Personalizado" data-price="0.00">
-                    <img src="images/marcadordepaginapersonalizado.jpg" alt="Marcador de Pagina Personalizado">
-                    <h4>Marcador de Pagina Personalizado</h4>
-                    <span class="product-price">$50.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Marcador%20de%20Pagina%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Perfumador de Auto Personalizado" data-price="0.00">
-                    <img src="images/perfumadordeautopersonalizado.jpg" alt="Perfumador de Auto Personalizado">
-                    <h4>Perfumador de Auto Personalizado</h4>
-                    <span class="product-price">$60.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Perfumador%20de%20Auto%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Perfumador de Auto Redondo Personalizado" data-price="0.00">
-                    <img src="images/perfumadordeautoredondopersonalizado.jpg" alt="Perfumador de Auto Redondo Personalizado">
-                    <h4>Perfumador de Auto Redondo Personalizado</h4>
-                    <span class="product-price">$60.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Perfumador%20de%20Auto%20Redondo%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Portallave Personalizado" data-price="0.00">
-                    <img src="images/portallavepersonalizado.jpg" alt="Portallave Personalizado">
-                    <h4>Portallave Personalizado</h4>
-                    <span class="product-price">$350.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Portallave%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Portaretrato Ceramica Personalizado" data-price="0.00">
-                    <img src="images/portaretratoceramicapersonalizado.jpg" alt="Portaretrato Ceramica Personalizado">
-                    <h4>Portaretrato Ceramica Personalizado</h4>
-                    <span class="product-price">$200.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Portaretrato%20Ceramica%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Portaretrato de Vidrio Personalizado" data-price="0.00">
-                    <img src="images/portaretratodevidriopersonalizado.jpg" alt="Portaretrato de Vidrio Personalizado">
-                    <h4>Portaretrato de Vidrio Personalizado</h4>
-                    <span class="product-price">$450.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Portaretrato%20de%20Vidrio%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Taza con Cuchara Personalizada" data-price="0.00">
-                    <img src="images/tazaconcucharapersonalizada.jpg" alt="Taza con Cuchara Personalizada">
-                    <h4>Taza con Cuchara Personalizada</h4>
-                    <span class="product-price">$300.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Taza%20con%20Cuchara%20Personalizada.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Taza Dorada Personalizada" data-price="0.00">
-                    <img src="images/tazadoradapersonalizadadorada.jpg" alt="Taza Dorada Personalizada">
-                    <h4>Taza Dorada Personalizada</h4>
-                    <span class="product-price">$250.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Taza%20Dorada%20Personalizada.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Taza Personalizada Azul" data-price="0.00">
-                    <img src="images/tazapersonalizadaazul.jpg" alt="Taza Personalizada Azul">
-                    <h4>Taza Personalizada Azul</h4>
-                    <span class="product-price">$250.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Taza%20Personalizada%20Azul.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-                <div class="product-item" data-name="Vaso Termico Personalizado" data-price="0.00">
-                    <img src="images/vasotermicopersonalizado.jpg" alt="Vaso Termico Personalizado">
-                    <h4>Vaso Termico Personalizado</h4>
-                    <span class="product-price">$550.00</span>
-                    <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Vaso%20Termico%20Personalizado.%20Precio:%20$0.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section id="catalogo" class="featured-products">
+            <h2>Productos para Personalizar</h2>
+            <div class="product-grid">
+                <h3>Tazas y Vasos</h3>
+                <div class="product-item" data-name="Vaso Termico Personalizado" data-price="400.00">
+                    <img src="images/vasotermicopersonalizado.jpg" alt="Vaso Térmico Personalizado">
+                    <h4>Vaso Térmico Personalizado</h4>
+                    <span class="product-price">$400.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Vaso%20Térmico%20Personalizado.%20Precio:%20$400.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Taza Personalizada Azul" data-price="350.00">
+                    <img src="images/tazapersonalizadaazul.jpg" alt="Taza Personalizada Azul">
+                    <h4>Taza Personalizada Azul</h4>
+                    <span class="product-price">$350.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Taza%20Personalizada%20Azul.%20Precio:%20$350.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Taza Dorada Personalizada" data-price="400.00">
+                    <img src="images/tazadoradapersonalizadadorada.jpg" alt="Taza Dorada Personalizada">
+                    <h4>Taza Dorada Personalizada</h4>
+                    <span class="product-price">$400.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Taza%20Dorada%20Personalizada.%20Precio:%20$400.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Taza con Cuchara Personalizada" data-price="380.00">
+                    <img src="images/tazaconcucharapersonalizada.jpg" alt="Taza con Cuchara Personalizada">
+                    <h4>Taza con Cuchara Personalizada</h4>
+                    <span class="product-price">$380.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Taza%20con%20Cuchara%20Personalizada.%20Precio:%20$380.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Jarro Peltre Personalizado" data-price="320.00">
+                    <img src="images/jarropeltrepersonalizado.jpg" alt="Jarro de Peltre Personalizado">
+                    <h4>Jarro de Peltre Personalizado</h4>
+                    <span class="product-price">$320.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Jarro%20de%20Peltre%20Personalizado.%20Precio:%20$320.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+    
+                <h3>Portaretratos y Cuadros</h3>
+                <div class="product-item" data-name="Portaretrato de Vidrio" data-price="300.00">
+                    <img src="images/portaretratodevidriopersonalizado.jpg" alt="Portaretrato de Vidrio">
+                    <h4>Portaretrato de Vidrio</h4>
+                    <span class="product-price">$300.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Portaretrato%20de%20Vidrio.%20Precio:%20$300.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Portaretrato Ceramica" data-price="350.00">
+                    <img src="images/portaretratoceramicapersonalizado.jpg" alt="Portaretrato de Cerámica">
+                    <h4>Portaretrato de Cerámica</h4>
+                    <span class="product-price">$350.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Portaretrato%20de%20Cerámica.%20Precio:%20$350.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Cuadro MDF" data-price="450.00">
+                    <img src="images/cuadromdfpersonalizado.jpg" alt="Cuadro MDF Personalizado">
+                    <h4>Cuadro MDF Personalizado</h4>
+                    <span class="product-price">$450.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Cuadro%20MDF.%20Precio:%20$450.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Cuadro Feliz Dia" data-price="450.00">
+                    <img src="images/cuadrofelizdiapersonalizado.jpg" alt="Cuadro Feliz Día">
+                    <h4>Cuadro Feliz Día</h4>
+                    <span class="product-price">$450.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Cuadro%20Feliz%20Día.%20Precio:%20$450.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
 
-        <section id="nosotros" class="about-us">
-            <div class="about-content">
-                <h2>Sobre Nosotros</h2>
-                <p>En **Impacto Creativo**, nos especializamos en convertir tus ideas en productos únicos y especiales. Desde tazas y remeras personalizadas hasta cuadros y llaveros, cada artículo es diseñado con pasión y atención al detalle. Nuestro objetivo es ayudarte a crear regalos inolvidables o a darle un toque personal a tus objetos cotidianos.</p>
-                <p>Creemos en el poder de la creatividad y la personalización para expresar quién eres. ¡Déjanos ser parte de tu próximo proyecto!</p>
-            </div>
-            <div class="about-image">
-                <img src="images/nosotros.jpg" alt="Una persona trabajando en un diseño personalizado">
-            </div>
-        </section>
+                <h3>Llaveros y Colgantes</h3>
+                <div class="product-item" data-name="Portallave Personalizado" data-price="250.00">
+                    <img src="images/portallavepersonalizado.jpg" alt="Portallave Personalizado">
+                    <h4>Portallave Personalizado</h4>
+                    <span class="product-price">$250.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Portallave%20Personalizado.%20Precio:%20$250.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Llavero Cuero Personalizado" data-price="180.00">
+                    <img src="images/llaverocueropersonalizado.jpg" alt="Llavero de Cuero Personalizado">
+                    <h4>Llavero de Cuero Personalizado</h4>
+                    <span class="product-price">$180.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Llavero%20de%20Cuero%20Personalizado.%20Precio:%20$180.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item" data-name="Llavero Acrilico Personalizado" data-price="150.00">
+                    <img src="images/llaveroacrilicopersonalizado.jpg" alt="Llavero de Acrílico Personalizado">
+                    <h4>Llavero de Acrílico Personalizado</h4>
+                    <span class="product-price">$150.00</span>
+                    <div class="button-group">
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20un%20Llavero%20Acrilico%20Personalizado.%20Precio:%20$150.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="confidence-section">
-            <h2>Por Qué Confiar en Nosotros</h2>
-            <div class="confidence-grid">
-                <div class="confidence-item">
-                    <i class="fas fa-magic"></i>
-                    <h3>Diseños Únicos</h3>
-                    <p>Creamos diseños 100% originales y adaptados a tu estilo.</p>
-                </div>
-                <div class="confidence-item">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Calidad Garantizada</h3>
-                    <p>Utilizamos materiales de alta durabilidad para un acabado perfecto.</p>
-                </div>
-                <div class="confidence-item">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>Entrega Rápida</h3>
-                    <p>Nos comprometemos a que tu pedido llegue en el menor tiempo posible.</p>
-                </div>
-                <div class="confidence-item">
-                    <i class="fas fa-smile"></i>
-                    <h3>Satisfacción Total</h3>
-                    <p>Nos aseguramos de que cada cliente esté feliz con el resultado final.</p>
-                </div>
-            </div>
-        </section>
+        <section id="nosotros" class="about-us">
+            <div class="about-content">
+                <h2>Sobre Nosotros</h2>
+                <p>En **Impacto Creativo**, nos especializamos en convertir tus ideas en productos únicos y especiales. Desde tazas y remeras personalizadas hasta cuadros y llaveros, cada artículo es diseñado con pasión y atención al detalle. Nuestro objetivo es ayudarte a crear regalos inolvidables o a darle un toque personal a tus objetos cotidianos.</p>
+                <p>Creemos en el poder de la creatividad y la personalización para expresar quién eres. ¡Déjanos ser parte de tu próximo proyecto!</p>
+            </div>
+            <div class="about-image">
+                <img src="images/nosotros.jpg" alt="Una persona trabajando en un diseño personalizado">
+            </div>
+        </section>
 
-        <section id="portfolio" class="portfolio-section">
-            <h2>Nuestro Trabajo</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item"><img src="images/remera-personalizada-trabajo.jpg" alt="Diseño de remera personalizado"></div>
-                <div class="portfolio-item"><img src="images/taza-personalizada-trabajo.jpg" alt="Diseño de taza personalizado"></div>
-                <div class="portfolio-item"><img src="images/cuadro-personalizado-trabajo.jpg" alt="Diseño de cuadro personalizado"></div>
-                <div class="portfolio-item"><img src="images/llavero-personalizado-trabajo.jpg" alt="Diseño de llavero personalizado"></div>
-                <div class="portfolio-item"><img src="images/termo-personalizado-trabajo.jpg" alt="Diseño de termo personalizado"></div>
-            </div>
-        </section>
+        <section class="confidence-section">
+            <h2>Por Qué Confiar en Nosotros</h2>
+            <div class="confidence-grid">
+                <div class="confidence-item">
+                    <i class="fas fa-magic"></i>
+                    <h3>Diseños Únicos</h3>
+                    <p>Creamos diseños 100% originales y adaptados a tu estilo.</p>
+                </div>
+                <div class="confidence-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Utilizamos materiales de alta durabilidad para un acabado perfecto.</p>
+                </div>
+                <div class="confidence-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Entrega Rápida</h3>
+                    <p>Nos comprometemos a que tu pedido llegue en el menor tiempo posible.</p>
+                </div>
+                <div class="confidence-item">
+                    <i class="fas fa-smile"></i>
+                    <h3>Satisfacción Total</h3>
+                    <p>Nos aseguramos de que cada cliente esté feliz con el resultado final.</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="faq" class="faq-section">
-            <h2>Preguntas Frecuentes</h2>
-            <div class="faq-item">
-                <h3>¿Cómo hago un pedido?</h3>
-                <p>Puedes contactarnos directamente por WhatsApp para discutir tu idea, enviarnos la imagen y confirmar el precio. ¡Es muy sencillo!</p>
-            </div>
-            <div class="faq-item">
-                <h3>¿Cuánto tiempo tarda la entrega?</h3>
-                <p>El tiempo de producción y entrega varía según el producto y la cantidad, pero siempre te daremos una estimación precisa al momento de tu pedido.</p>
-            </div>
-            <div class="faq-item">
-                <h3>¿Puedo enviar mi propio diseño?</h3>
-                <p>¡Por supuesto! Nos encanta trabajar con las ideas de nuestros clientes. Solo asegúrate de que tu imagen tenga buena calidad.</p>
-            </div>
-        </section>
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <p>¿Tienes una idea o pregunta? ¡Escríbenos!</p>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="form-button">Enviar Mensaje</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Impacto Creativo</h2>
+                <p>Personalizamos tus sueños en productos únicos y de alta calidad.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Enlaces Rápidos</h2>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Síguenos</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ImpactoCreativoUY" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/impacto258" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@impactocreativo26" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/59899063756" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Impacto Creativo | Todos los derechos reservados.
+        </div>
+    </footer>
 
-        <section id="contacto" class="contact-section">
-            <h2>Contacto</h2>
-            <p>¿Tienes una idea o pregunta? ¡Escríbenos!</p>
-            <div class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="form-button">Enviar Mensaje</button>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h2>Impacto Creativo</h2>
-                <p>Personalizamos tus sueños en productos únicos y de alta calidad.</p>
-            </div>
-            <div class="footer-section links">
-                <h2>Enlaces Rápidos</h2>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Catálogo</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section social">
-                <h2>Síguenos</h2>
-                <div class="social-icons">
-                   <a href="https://www.facebook.com/impactocreativouruguay" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/impactocreativouy" target="_blank"><i class="fab fa-instagram"></i></a> 
-                    a href="http://tiktok.com/@impactocreativo26" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://wa.me/59899063756" target="_blank"><i class="fab fa-whatsapp"></i></a> 
-                    
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2024 Impacto Creativo | Todos los derechos reservados.
-        </div>
-    </footer>
+    <a href="https://wa.me/59899063756?text=Hola,%20quisiera%20hacer%20una%20consulta." class="floating-whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script>
+        const cartModal = document.getElementById('cart-modal');
+        const cartItemsContainer = document.getElementById('cart-items-container');
+        const cartCounter = document.getElementById('cart-counter');
+        const cartTotalSpan = document.getElementById('cart-total');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartUI();
+        });
 
-    <a href="https://wa.me/59899063756?text=Hola,%20quisiera%20hacer%20una%20consulta." class="floating-whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    
-    <script>
-        const cartModal = document.getElementById('cart-modal');
-        const cartItemsContainer = document.getElementById('cart-items-container');
-        const cartCounter = document.getElementById('cart-counter');
-        const cartTotalSpan = document.getElementById('cart-total');
-        const emptyCartMessage = document.getElementById('empty-cart-message');
-        const checkoutBtn = document.getElementById('checkout-btn');
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            updateCartUI();
-        });
+        function openModal() {
+            cartModal.style.display = 'block';
+            document.body.classList.add('no-scroll');
+        }
 
-        function openModal() {
-            cartModal.style.display = 'block';
-            document.body.classList.add('no-scroll');
-        }
+        function closeModal() {
+            cartModal.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+        }
 
-        function closeModal() {
-            cartModal.style.display = 'none';
-            document.body.classList.remove('no-scroll');
-        }
+        function updateCartUI() {
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = 'block';
+                checkoutBtn.style.display = 'none';
+            } else {
+                emptyCartMessage.style.display = 'none';
+                checkoutBtn.style.display = 'block';
+                const whatsappMessage = formatWhatsAppMessage();
+                checkoutBtn.href = `https://wa.me/59899063756?text=${encodeURIComponent(whatsappMessage)}`;
+            }
 
-        function updateCartUI() {
-            cartItemsContainer.innerHTML = '';
-            let total = 0;
-            if (cart.length === 0) {
-                emptyCartMessage.style.display = 'block';
-                checkoutBtn.style.display = 'none';
-            } else {
-                emptyCartMessage.style.display = 'none';
-                checkoutBtn.style.display = 'block';
-                const whatsappMessage = formatWhatsAppMessage();
-                checkoutBtn.href = `https://wa.me/59899063756?text=${encodeURIComponent(whatsappMessage)}`;
-            }
+            cart.forEach(item => {
+                const itemPrice = parseFloat(item.price);
+                const itemTotal = itemPrice * item.quantity;
+                total += itemTotal;
 
-            cart.forEach(item => {
-                const itemPrice = parseFloat(item.price);
-                const itemTotal = itemPrice * item.quantity;
-                total += itemTotal;
+                const cartItemElement = document.createElement('div');
+                cartItemElement.classList.add('cart-item');
+                cartItemElement.innerHTML = `
+                    <div class="cart-item-info">
+                        <strong>${item.name}</strong>
+                        <span> - $${itemPrice.toFixed(2)}</span>
+                    </div>
+                    <div class="item-quantity">
+                        <button onclick="changeQuantity('${item.name}', -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="changeQuantity('${item.name}', 1)">+</button>
+                        <button class="remove-item-btn" onclick="removeItem('${item.name}')">Eliminar</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+            cartTotalSpan.textContent = `$${total.toFixed(2)}`;
+            cartCounter.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
 
-                const cartItemElement = document.createElement('div');
-                cartItemElement.classList.add('cart-item');
-                cartItemElement.innerHTML = `
-                    <div class="cart-item-info">
-                        <strong>${item.name}</strong>
-                        <span> - $${itemPrice.toFixed(2)}</span>
-                    </div>
-                    <div class="item-quantity">
-                        <button onclick="changeQuantity('${item.name}', -1)">-</button>
-                        <span>${item.quantity}</span>
-                        <button onclick="changeQuantity('${item.name}', 1)">+</button>
-                        <button class="remove-item-btn" onclick="removeItem('${item.name}')">Eliminar</button>
-                    </div>
-                `;
-                cartItemsContainer.appendChild(cartItemElement);
-            });
-            cartTotalSpan.textContent = `$${total.toFixed(2)}`;
-            cartCounter.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
+        function addToCart(event) {
+            const productItem = event.target.closest('.product-item');
+            const productName = productItem.getAttribute('data-name');
+            const productPrice = productItem.getAttribute('data-price');
+            
+            const existingItem = cart.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name: productName, price: productPrice, quantity: 1 });
+            }
+            
+            updateCartUI();
+        }
 
-        function addToCart(event) {
-            const productItem = event.target.closest('.product-item');
-            const productName = productItem.getAttribute('data-name');
-            const productPrice = productItem.getAttribute('data-price');
-            
-            const existingItem = cart.find(item => item.name === productName);
-            if (existingItem) {
-                existingItem.quantity++;
-            } else {
-                cart.push({ name: productName, price: productPrice, quantity: 1 });
-            }
-            
-            updateCartUI();
-        }
+        function changeQuantity(productName, change) {
+            const existingItem = cart.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity += change;
+                if (existingItem.quantity <= 0) {
+                    removeItem(productName);
+                }
+            }
+            updateCartUI();
+        }
 
-        function changeQuantity(productName, change) {
-            const existingItem = cart.find(item => item.name === productName);
-            if (existingItem) {
-                existingItem.quantity += change;
-                if (existingItem.quantity <= 0) {
-                    removeItem(productName);
-                }
-            }
-            updateCartUI();
-        }
+        function removeItem(productName) {
+            cart = cart.filter(item => item.name !== productName);
+            updateCartUI();
+        }
+        
+        function formatWhatsAppMessage() {
+            let message = "Hola, me gustaría hacer un pedido con los siguientes productos:\n";
+            cart.forEach(item => {
+                message += `- ${item.name} x ${item.quantity} unidades\n`;
+            });
+            const total = cart.reduce((sum, item) => sum + (parseFloat(item.price) * item.quantity), 0);
+            message += `\nTotal: $${total.toFixed(2)}`;
+            return message;
+        }
 
-        function removeItem(productName) {
-            cart = cart.filter(item => item.name !== productName);
-            updateCartUI();
-        }
-        
-        function formatWhatsAppMessage() {
-            let message = "Hola, me gustaría hacer un pedido con los siguientes productos:\n";
-            cart.forEach(item => {
-                message += `- ${item.name} x ${item.quantity} unidades\n`;
-            });
-            const total = cart.reduce((sum, item) => sum + (parseFloat(item.price) * item.quantity), 0);
-            message += `\nTotal: $${total.toFixed(2)}`;
-            return message;
-        }
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
 
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', addToCart);
-        });
-
-    </script>
+    </script>
 </body>
 </html>
+
 
 
 
