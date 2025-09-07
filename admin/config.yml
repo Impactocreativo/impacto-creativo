@@ -1,4 +1,3 @@
-# Configuración del backend (la conexión con GitHub)
 backend:
   name: github
   repo: impactocreativo/impacto-creativo
@@ -8,10 +7,8 @@ backend:
   client_id: Ov23liQ4sFT5FqyxnfYe
   client_secret: 7dea6d481798977c84d102906430aa20650d5d1e
 
-# Configuración de los flujos de trabajo
 publish_mode: editorial_workflow
 
-# Colecciones de contenido (tus productos)
 collections:
   - name: "catalogo"
     label: "Catálogo de Productos"
