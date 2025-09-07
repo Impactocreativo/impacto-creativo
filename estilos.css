@@ -183,15 +183,17 @@ section {
     object-fit: cover;
 }
 
+/* Se ajustó el tamaño de la fuente para que los títulos se vean mejor */
 .product-item h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin: 15px 10px 5px;
 }
 
+/* Se ajustó el tamaño de la fuente para que el precio se vea mejor */
 .product-item .product-price {
     color: var(--primary-color);
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 0 10px 15px;
 }
 
