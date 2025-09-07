@@ -632,8 +632,27 @@
         lastScrollTop = scrollTop;
     });
 </script>
+   <script>
+    var lastScrollTop = 0;
+    var header = document.querySelector('.main-header');
+
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            // Desplazamiento hacia abajo
+            header.classList.add('header-hidden');
+        } else {
+            // Desplazamiento hacia arriba
+            header.classList.remove('header-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+</script> 
 </body>
 </html>
+
 
 
 
