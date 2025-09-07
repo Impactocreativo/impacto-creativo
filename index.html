@@ -57,7 +57,7 @@
             <h2>Productos para Personalizar</h2>
             
             <div class="product-grid">
-              {% for product in site.catalogo %}
+              {% for product in site.productos %}
                 <div class="product-item">
                   <img src="{{ product.imagen }}" alt="{{ product.nombre }}">
                   <h4>{{ product.nombre }}</h4>
@@ -188,4 +188,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
