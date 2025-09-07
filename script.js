@@ -13,10 +13,28 @@ function setupEventListeners() {
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', updateWhatsAppLink);
     }
+
+    // Modal close events
+    const cartModal = document.getElementById('cart-modal');
+    if (cartModal) {
+        cartModal.addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+    }
+
+    document.querySelectorAll('.close-button').forEach(button => {
+        button.addEventListener('click', closeModal);
+    });
 }
 
 function addToCart(event) {
     const productItem = event.target.closest('.product-item');
+    if (!productItem) {
+        console.error('No se encontró el producto.');
+        return;
+    }
     const productName = productItem.querySelector('h4').innerText;
     const productPrice = productItem.querySelector('.product-price').innerText.replace('$', '');
 
@@ -37,13 +55,13 @@ function addToCart(event) {
 
 function updateCartModal() {
     const cartItemsContainer = document.getElementById('cart-items-container');
-    const emptyMessage = document.getElementById('empty-cart-message');
+    const emptyMessage = document.getElementById('cart-items-container').querySelector('p');
     const cartCounter = document.getElementById('cart-counter');
     const cartTotalElement = document.getElementById('cart-total');
 
     if (cart.length === 0) {
         if (emptyMessage) emptyMessage.style.display = 'block';
-        if (cartItemsContainer) cartItemsContainer.innerHTML = '';
+        if (cartItemsContainer) cartItemsContainer.innerHTML = '<p id="empty-cart-message">Tu carrito está vacío.</p>';
     } else {
         if (emptyMessage) emptyMessage.style.display = 'none';
         if (cartItemsContainer) {
@@ -73,11 +91,13 @@ function updateCartModal() {
 }
 
 function changeQuantity(index, delta) {
-    cart[index].quantity += delta;
-    if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
+    if (cart[index]) {
+        cart[index].quantity += delta;
+        if (cart[index].quantity <= 0) {
+            cart.splice(index, 1);
+        }
+        updateCartModal();
     }
-    updateCartModal();
 }
 
 function openModal() {
@@ -109,4 +129,3 @@ function updateWhatsAppLink() {
         whatsappLink.href = '#';
     }
 }
-
