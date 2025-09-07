@@ -64,9 +64,17 @@ section {
     padding: 15px 5%;
     background-color: var(--light-background);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
+    position: fixed; /* Cambiado a fixed para el efecto de ocultar */
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
+    transition: transform 0.3s ease-in-out; /* Agregado para una transición suave */
+}
+
+/* Esta nueva clase oculta el encabezado deslizando hacia arriba */
+.header-hidden {
+    transform: translateY(-100%);
 }
 
 .logo img {
@@ -568,3 +576,4 @@ section {
         margin-right: auto;
     }
 }
+
