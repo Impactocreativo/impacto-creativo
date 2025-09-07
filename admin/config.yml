@@ -1,12 +1,6 @@
-# Configuración del backend (la conexión con GitHub)
+# Configuración del backend de prueba
 backend:
-  name: github
-  repo: impactocreativo/impacto-creativo
-  branch: gh-pages
-  auth_type: implicit
-  auth_provider: github
-  client_id: Ov23liQ4sFT5FqyxnfYe
-  client_secret: 7dea6d481798977c84d10290650d5d1e
+  name: test-repo
 
 # Configuración de las imágenes que subas
 media_folder: "assets/images/uploads"
