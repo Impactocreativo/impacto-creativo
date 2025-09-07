@@ -3,8 +3,12 @@ backend:
   name: github
   repo: impactocreativo/impacto-creativo
   branch: gh-pages
+  auth_type: implicit
+  auth_provider: github
+  client_id: Ov23liQ4sFT5FqyxnfYe
+  client_secret: 7dea6d481798977c84d102906430aa20650d5d1e
 
-# Configuración del flujo de trabajo y la interfaz de usuario
+# Configuración de los flujos de trabajo
 publish_mode: editorial_workflow
 
 # Colecciones de contenido (tus productos)
