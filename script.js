@@ -14,7 +14,11 @@ function setupEventListeners() {
         checkoutBtn.addEventListener('click', updateWhatsAppLink);
     }
 
-    // Modal close events
+    const cartIconContainer = document.querySelector('.cart-icon-container');
+    if (cartIconContainer) {
+        cartIconContainer.addEventListener('click', openModal);
+    }
+
     const cartModal = document.getElementById('cart-modal');
     if (cartModal) {
         cartModal.addEventListener('click', function(event) {
@@ -31,15 +35,11 @@ function setupEventListeners() {
 
 function addToCart(event) {
     const productItem = event.target.closest('.product-item');
-    if (!productItem) {
-        console.error('No se encontró el producto.');
-        return;
-    }
+    if (!productItem) return;
     const productName = productItem.querySelector('h4').innerText;
     const productPrice = productItem.querySelector('.product-price').innerText.replace('$', '');
 
     const existingItem = cart.find(item => item.name === productName);
-
     if (existingItem) {
         existingItem.quantity++;
     } else {
@@ -49,19 +49,18 @@ function addToCart(event) {
             quantity: 1
         });
     }
-
     updateCartModal();
 }
 
 function updateCartModal() {
     const cartItemsContainer = document.getElementById('cart-items-container');
-    const emptyMessage = document.getElementById('cart-items-container').querySelector('p');
+    const emptyMessage = document.getElementById('empty-cart-message');
     const cartCounter = document.getElementById('cart-counter');
     const cartTotalElement = document.getElementById('cart-total');
 
     if (cart.length === 0) {
         if (emptyMessage) emptyMessage.style.display = 'block';
-        if (cartItemsContainer) cartItemsContainer.innerHTML = '<p id="empty-cart-message">Tu carrito está vacío.</p>';
+        if (cartItemsContainer) cartItemsContainer.innerHTML = '';
     } else {
         if (emptyMessage) emptyMessage.style.display = 'none';
         if (cartItemsContainer) {
@@ -129,3 +128,4 @@ function updateWhatsAppLink() {
         whatsappLink.href = '#';
     }
 }
+
