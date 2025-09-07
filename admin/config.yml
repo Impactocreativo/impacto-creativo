@@ -1,0 +1,22 @@
+# Configuración del backend (la conexión con GitHub)
+backend:
+  name: github
+  repo: impactocreativo/impacto-creativo
+  branch: gh-pages
+
+# Configuración del flujo de trabajo y la interfaz de usuario
+publish_mode: editorial_workflow
+
+# Colecciones de contenido (tus productos)
+collections:
+  - name: "catalogo"
+    label: "Catálogo de Productos"
+    folder: "_productos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Nombre del Producto", name: "nombre", widget: "string"}
+      - {label: "Precio", name: "precio", widget: "number", value_type: "float"}
+      - {label: "URL de la Imagen", name: "imagen", widget: "image"}
+      - {label: "Descripción Corta", name: "descripcion", widget: "string", required: false}
+      - {label: "Categoría", name: "categoria", widget: "select", options: ["Tazas y Vasos", "Portaretratos y Cuadros", "Llaveros y Colgantes", "Remeras y Gorras", "Perfumes", "Otros Productos"]}
