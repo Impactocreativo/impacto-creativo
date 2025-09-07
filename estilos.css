@@ -31,7 +31,7 @@ body {
     padding: 0 20px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: 700;
     color: var(--secondary-color);
     margin-bottom: 20px;
@@ -157,7 +157,7 @@ section {
 /* Se ajustó a un tamaño más pequeño para móviles */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     padding: 0 5%;
 }
@@ -185,7 +185,7 @@ section {
 }
 
 /* Se ajustó el tamaño de la fuente para que los títulos se vean mejor */
-.product-item h3 {
+.product-item h4 {
     font-size: 1.4em;
     margin: 15px 10px 5px;
 }
@@ -559,5 +559,12 @@ section {
 
     .about-us, .confidence-grid, .footer-content {
         flex-direction: column;
+    }
+}
+@media (min-width: 1024px) {
+    .product-item {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
