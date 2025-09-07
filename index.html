@@ -130,9 +130,9 @@
                     <h4>Cajas Sorpresa</h4>
                     <span class="product-price">$25.00</span>
                     <div class="button-group">
-  <button class="add-to-cart-btn">Agregar al Carrito</button>
-  <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20{{ product.nombre }}.%20Precio:%20${{ product.precio }}" target="_blank" class="buy-now-btn">Comprar</a>
-</div>
+                        <button class="add-to-cart-btn">Agregar al Carrito</button>
+                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Caja%20Sorpresa.%20Precio:%20$25.00" target="_blank" class="buy-now-btn">Comprar</a>
+                    </div>
                 </div>
                 <div class="product-item" data-name="Calcomanía Única" data-price="80.00">
                     <img src="images/calcamonia-personalizada.jpg" alt="Calcomanía Única">
@@ -371,11 +371,11 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="nosotros" class="about-us">
             <div class="about-content">
                 <h2>Sobre Nosotros</h2>
-                <p>En *Impacto Creativo*, nos especializamos en convertir tus ideas en productos únicos y especiales. Desde tazas y remeras personalizadas hasta cuadros y llaveros, cada artículo es diseñado con pasión y atención al detalle. Nuestro objetivo es ayudarte a crear regalos inolvidables o a darle un toque personal a tus objetos cotidianos.</p>
+                <p>En **Impacto Creativo**, nos especializamos en convertir tus ideas en productos únicos y especiales. Desde tazas y remeras personalizadas hasta cuadros y llaveros, cada artículo es diseñado con pasión y atención al detalle. Nuestro objetivo es ayudarte a crear regalos inolvidables o a darle un toque personal a tus objetos cotidianos.</p>
                 <p>Creemos en el poder de la creatividad y la personalización para expresar quién eres. ¡Déjanos ser parte de tu próximo proyecto!</p>
             </div>
             <div class="about-image">
@@ -476,140 +476,19 @@
                 <h2>Síguenos</h2>
                 <div class="social-icons">
                    <a href="https://www.facebook.com/impacto.creativo.113114?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a> 
-                    <a href="https://www.instagram.com/impacto258" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="http://tiktok.com/@impactocreativo26" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://wa.me/59899063756" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                   <a href="https://www.instagram.com/impacto_creativo_uy/" target="_blank"><i class="fab fa-instagram"></i></a>
+                   <a href="https://wa.me/59899063756" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 Impacto Creativo | Todos los derechos reservados.
+            <p>&copy; 2024 Impacto Creativo. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <a href="https://wa.me/59899063756?text=Hola,%20quisiera%20hacer%20una%20consulta." class="floating-whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
     
-    <script>
-        const cartModal = document.getElementById('cart-modal');
-        const cartItemsContainer = document.getElementById('cart-items-container');
-        const cartCounter = document.getElementById('cart-counter');
-        const cartTotalSpan = document.getElementById('cart-total');
-        const emptyCartMessage = document.getElementById('empty-cart-message');
-        const checkoutBtn = document.getElementById('checkout-btn');
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            updateCartUI();
-        });
-
-        function openModal() {
-            cartModal.style.display = 'block';
-            document.body.classList.add('no-scroll');
-        }
-
-        function closeModal() {
-            cartModal.style.display = 'none';
-            document.body.classList.remove('no-scroll');
-        }
-
-        function updateCartUI() {
-            cartItemsContainer.innerHTML = '';
-            let total = 0;
-            if (cart.length === 0) {
-                emptyCartMessage.style.display = 'block';
-                checkoutBtn.style.display = 'none';
-            } else {
-                emptyCartMessage.style.display = 'none';
-                checkoutBtn.style.display = 'block';
-                const whatsappMessage = formatWhatsAppMessage();
-                checkoutBtn.href = https://wa.me/59899063756?text=${encodeURIComponent(whatsappMessage)};
-            }
-
-            cart.forEach(item => {
-                const itemPrice = parseFloat(item.price);
-                const itemTotal = itemPrice * item.quantity;
-                total += itemTotal;
-
-                const cartItemElement = document.createElement('div');
-                cartItemElement.classList.add('cart-item');
-                cartItemElement.innerHTML = `
-                    <div class="cart-item-info">
-                        <strong>${item.name}</strong>
-                        <span> - $${itemPrice.toFixed(2)}</span>
-                    </div>
-                    <div class="item-quantity">
-                        <button onclick="changeQuantity('${item.name}', -1)">-</button>
-                        <span>${item.quantity}</span>
-                        <button onclick="changeQuantity('${item.name}', 1)">+</button>
-                        <button class="remove-item-btn" onclick="removeItem('${item.name}')">Eliminar</button>
-                    </div>
-                `;
-                cartItemsContainer.appendChild(cartItemElement);
-            });
-            cartTotalSpan.textContent = $${total.toFixed(2)};
-            cartCounter.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-
-        function addToCart(event) {
-            const productItem = event.target.closest('.product-item');
-            const productName = productItem.getAttribute('data-name');
-            const productPrice = productItem.getAttribute('data-price');
-            
-            const existingItem = cart.find(item => item.name === productName);
-            if (existingItem) {
-                existingItem.quantity++;
-            } else {
-                cart.push({ name: productName, price: productPrice, quantity: 1 });
-            }
-            
-            updateCartUI();
-        }
-
-        function changeQuantity(productName, change) {
-            const existingItem = cart.find(item => item.name === productName);
-            if (existingItem) {
-                existingItem.quantity += change;
-                if (existingItem.quantity <= 0) {
-                    removeItem(productName);
-                }
-            }
-            updateCartUI();
-        }
-
-        function removeItem(productName) {
-            cart = cart.filter(item => item.name !== productName);
-            updateCartUI();
-        }
-        
-        function formatWhatsAppMessage() {
-            let message = "Hola, me gustaría hacer un pedido con los siguientes productos:\n";
-            cart.forEach(item => {
-                message += - ${item.name} x ${item.quantity} unidades\n;
-            });
-            const total = cart.reduce((sum, item) => sum + (parseFloat(item.price) * item.quantity), 0);
-            message += \nTotal: $${total.toFixed(2)};
-            return message;
-        }
-
-        function toggleDisplay(elementId) {
-            var element = document.getElementById(elementId);
-            if (element.style.display === "none") {
-                element.style.display = "grid";
-            } else {
-                element.style.display = "none";
-            }
-        }
-
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', addToCart);
-        });
-
-    </script>
-  <script src="script.js"></script>
-   <script src="//code.tidio.co/34dlfmokbnhovhzezorvimemsavgoi1o.js" async></script> 
+    <script src="script.js"></script>
+    <script src="//code.tidio.co/34dlfmokbnhovhzezorvimemsavgoi1o.js" async></script>
 </body>
 </html>
+
 
