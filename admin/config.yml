@@ -1,3 +1,4 @@
+# Configuración del backend (la conexión con GitHub)
 backend:
   name: github
   repo: impactocreativo/impacto-creativo
@@ -5,10 +6,21 @@ backend:
   auth_type: implicit
   auth_provider: github
   client_id: Ov23liQ4sFT5FqyxnfYe
-  client_secret: 7dea6d481798977c84d102906430aa20650d5d1e
+  client_secret: 7dea6d481798977c84d10290650d5d1e
 
+# Configuración de las imágenes que subas
+media_folder: "assets/images/uploads"
+public_folder: "assets/images/uploads"
+
+media_library:
+  name: "uploadcare"
+  config:
+    publicKey: "demopublickey"
+
+# Configuración del flujo de trabajo y la interfaz de usuario
 publish_mode: editorial_workflow
 
+# Colecciones de contenido (tus productos)
 collections:
   - name: "catalogo"
     label: "Catálogo de Productos"
