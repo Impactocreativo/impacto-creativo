@@ -56,20 +56,20 @@ section {
     padding: 60px 0;
 }
 
-/* Encabezado Principal */
+/* Asegúrate de que .main-header tenga estas propiedades */
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background-color: var(--light-background);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed; 
+    /* ... (resto de tus propiedades) ... */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Y que esta nueva clase esté agregada en tu archivo CSS */
+.header-hidden {
+    transform: translateY(-100%);
 }
 
 /* Esta nueva clase oculta el encabezado deslizando hacia arriba */
@@ -576,5 +576,6 @@ section {
         margin-right: auto;
     }
 }
+
 
 
