@@ -64,12 +64,12 @@ section {
     padding: 15px 5%;
     background-color: var(--light-background);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed; /* Cambiado a fixed para el efecto de ocultar */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: transform 0.3s ease-in-out; /* Agregado para una transición suave */
+    transition: transform 0.3s ease-in-out; 
 }
 
 /* Esta nueva clase oculta el encabezado deslizando hacia arriba */
@@ -576,4 +576,5 @@ section {
         margin-right: auto;
     }
 }
+
 
