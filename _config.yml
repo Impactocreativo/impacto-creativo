@@ -1,0 +1,8 @@
+# Título de tu sitio
+title: Impacto Creativo
+
+# Excluye las carpetas que no son necesarias
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
