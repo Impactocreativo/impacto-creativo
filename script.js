@@ -109,3 +109,4 @@ function updateWhatsAppLink() {
         whatsappLink.href = '#';
     }
 }
+
