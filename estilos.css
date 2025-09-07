@@ -626,8 +626,9 @@ section {
 .toggle-button:hover {
     background-color: #e64a19;
 }
-
 .floating-whatsapp-btn {
-    z-index: 10000;
+    z-index: 99999;
 }
+
+
 
