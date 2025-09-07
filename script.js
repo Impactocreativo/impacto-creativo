@@ -123,3 +123,4 @@ function addToCartFromButton(buttonEl) {
 function updateCartUI() {
   els.itemsContainer.innerHTML = "";
  
+
