@@ -130,9 +130,9 @@
                     <h4>Cajas Sorpresa</h4>
                     <span class="product-price">$25.00</span>
                     <div class="button-group">
-                        <button class="add-to-cart-btn">Agregar al Carrito</button>
-                        <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20una%20Caja%20Sorpresa.%20Precio:%20$25.00" target="_blank" class="buy-now-btn">Comprar</a>
-                    </div>
+  <button class="add-to-cart-btn">Agregar al Carrito</button>
+  <a href="https://wa.me/59899063756?text=Hola,%20quiero%20comprar%20{{ product.nombre }}.%20Precio:%20${{ product.precio }}" target="_blank" class="buy-now-btn">Comprar</a>
+</div>
                 </div>
                 <div class="product-item" data-name="Calcomanía Única" data-price="80.00">
                     <img src="images/calcamonia-personalizada.jpg" alt="Calcomanía Única">
@@ -610,3 +610,4 @@
     </script>
 </body>
 </html>
+
