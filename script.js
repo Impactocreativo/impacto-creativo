@@ -116,17 +116,13 @@ function updateWhatsAppLink() {
 
 // Código para ocultar la barra de navegación al hacer scroll
 window.addEventListener('scroll', function() {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > lastScrollTop) {
+    if (window.scrollY > 100) {
         // Desplazamiento hacia abajo
         header.classList.add('header-hidden');
     } else {
-        // Desplazamiento hacia arriba
+        // Desplazamiento hacia arriba o al inicio
         header.classList.remove('header-hidden');
     }
-    
-    lastScrollTop = scrollTop;
 });
 
 // Código para mostrar/ocultar los productos
@@ -142,3 +138,4 @@ function toggleDisplay(elementId) {
 document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     button.addEventListener('click', addToCart);
 });
+
