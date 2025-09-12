@@ -148,3 +148,34 @@ window.addEventListener('scroll', function() {
     
     lastScrollTop = scrollTop;
 });
+
+// --- Código del carrito (que ya tienes) ---
+let cart = [];
+
+function addToCart() {
+    // ... tu código ...
+}
+
+function updateCartUI() {
+    // ... tu código ...
+}
+// ------------------------------------------
+
+// --- Código para ocultar la barra de navegación (que ya tienes) ---
+var lastScrollTop = 0;
+var header = document.querySelector('.main-header');
+
+window.addEventListener('scroll', function() {
+    // ... tu código ...
+});
+// ------------------------------------------------------------------
+
+// --- PEGA TU NUEVO CÓDIGO AQUÍ ---
+function toggleDisplay(containerId) {
+    var container = document.getElementById(containerId);
+    if (container.style.display === "none") {
+        container.style.display = "grid"; 
+    } else {
+        container.style.display = "none";
+    }
+}
