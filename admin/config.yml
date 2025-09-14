@@ -1,6 +1,9 @@
-# Configuración del backend de prueba
+# Configuración del backend de GitHub
 backend:
-  name: test-repo
+  name: github
+  repo: impacto-creativo/impacto-creativo
+  branch: main
+  base_url: https://impactocreativo.github.io/impacto-creativo/
 
 # Configuración de las imágenes que subas
 media_folder: "assets/images/uploads"
