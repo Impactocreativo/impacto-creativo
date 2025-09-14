@@ -1,19 +1,12 @@
-# Configuración del backend de GitHub
+# Configuración del backend para Netlify Identity
 backend:
-  name: github
-  repo: impacto-creativo/impacto-creativo
-  branch: main
-  base_url: https://impactocreativo.github.io/impacto-creativo/
+  name: netlify-identity
 
-# Configuración de las imágenes que subas
-media_folder: "assets/images/uploads"
-public_folder: "assets/images/uploads"
-
+# Configuración de la biblioteca de medios de Cloudinary
 media_library:
   name: cloudinary
   config:
-    cloud_name: YOUR_CLOUD_NAME
-    api_key: YOUR_API_KEY
+    cloud_name: impacto-creativo
 
 # Configuración del flujo de trabajo y la interfaz de usuario
 publish_mode: editorial_workflow
@@ -28,6 +21,6 @@ collections:
     fields:
       - {label: "Nombre del Producto", name: "nombre", widget: "string"}
       - {label: "Precio", name: "precio", widget: "number", value_type: "float"}
-      - {label: "URL de la Imagen", name: "imagen", widget: "image"}
+      - {label: "Imagen", name: "imagen", widget: "image"}
       - {label: "Descripción Corta", name: "descripcion", widget: "string", required: false}
       - {label: "Categoría", name: "categoria", widget: "select", options: ["Tazas y Vasos", "Portaretratos y Cuadros", "Llaveros y Colgantes", "Remeras y Gorras", "Perfumes", "Otros Productos"]}
