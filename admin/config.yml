@@ -1,3 +1,7 @@
+# Configuración del backend de prueba
+backend:
+  name: test-repo
+
 # Configuración de las imágenes que subas
 media_folder: "assets/images/uploads"
 public_folder: "assets/images/uploads"
