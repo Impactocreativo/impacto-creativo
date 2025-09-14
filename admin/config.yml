@@ -1,3 +1,10 @@
+# Configuración del backend para Netlify Identity
+backend:
+  name: netlify-identity
+
+# Configuración de la biblioteca de medios de Cloudinary
+media_library:
+  name: cloudinary
   config:
     cloud_name: impacto-creativo
 
